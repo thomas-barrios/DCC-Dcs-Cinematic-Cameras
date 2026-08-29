@@ -1,0 +1,15 @@
+# Raw/edited footage - kept locally only, not published to the repo
+/live-feed-simulation/
+/assets/
+
+# Auto-generated CameraData.ini snapshots (written on every launch)
+/cameras-backup/
+
+# Machine-specific keyboard VID/PID, written by CameraController.ahk's
+# first-run detection
+/KeyboardConfig.ini
+
+# OS / editor junk
+Thumbs.db
+.DS_Store
+*.bak

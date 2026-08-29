@@ -2,9 +2,11 @@
 
 DCS World camera automation toolkit, built for recording cinematic multi-camera flythroughs. AutoHotkey v2 scripts drive the [Interception](https://github.com/oblitum/Interception) kernel-mode driver to record and precisely replay multi-leg camera-pan sequences.
 
-## Why a kernel driver?
+## Demos
 
-DCS reads camera/view keys through raw DirectInput device polling, which ignores all normal OS-level synthetic input — `Send`, `SendInput`, and `SendPlay` all silently fail to move the camera. Interception injects input at a kernel-mode filter level indistinguishable from a real hardware keyboard, which is the only input DirectInput will accept. Ordinary AHK hotkeys (menus, Esc/F4) still work fine, since those go through normal window messages instead.
+| [![DCC Demo 1](https://img.youtube.com/vi/gv7lBjWt0Og/mqdefault.jpg)](https://youtu.be/gv7lBjWt0Og) | [![DCC Demo 2](https://img.youtube.com/vi/r6WVgESxBh8/mqdefault.jpg)](https://youtu.be/r6WVgESxBh8) |
+|:---:|:---:|
+| **DCC Demo 1**<br>[youtu.be/gv7lBjWt0Og](https://youtu.be/gv7lBjWt0Og) | **DCC Demo 2**<br>[youtu.be/r6WVgESxBh8](https://youtu.be/r6WVgESxBh8) |
 
 ## Requirements
 
@@ -69,6 +71,10 @@ DCC-Dcs-Cinematic-Cameras/
 ├── assets/              # reaction/overlay footage used in edits (gitignored, kept locally)
 └── live-feed-simulation/  # recorded camera passes and stream footage (gitignored, kept locally)
 ```
+
+## Why a kernel driver?
+
+DCS reads camera/view keys through raw DirectInput device polling, which ignores all normal OS-level synthetic input — `Send`, `SendInput`, and `SendPlay` all silently fail to move the camera. Interception injects input at a kernel-mode filter level indistinguishable from a real hardware keyboard, which is the only input DirectInput will accept. Ordinary AHK hotkeys (menus, Esc/F4) still work fine, since those go through normal window messages instead.
 
 ## License
 
